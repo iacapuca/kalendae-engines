@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "kalendae-engines",
+  "workspaces": [
+    "client",
+    "calendar/*"
+  ],
+  "scripts": {
+    "format": "yarn workspaces run format",
+    "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint:fix",
+    "serve": "cd ./client && ember serve",
+    "serve-no-cache": "cd ./client && CLEAR_BROCCOLI_PERSISTENT_FILTER_CACHE=true ember serve",
+    "dev": "yarn serve",
+    "dev:ody": "cd ./client-support/ui/ember-odyssey && npm run start",
+    "test": "yarn workspaces run test",
+    "test-ci": "yarn workspaces run test-ci",
+    "generate": "cd ./client && ember generate",
+    "build-ody": "cd ./client-support/ui/ember-odyssey && ember build --environment=production"
+  },
+  "resolutions": {
+    "@embroider/core": "0.50.0",
+    "@embroider/macros": "0.50.0",
+    "@embroider/util": "0.50.0",
+    "@embroider/addon-shim": "0.50.0",
+    "@embroider/shared-internals": "0.50.0",
+    "ember-element-helper": "^0.6.1"
+  }
+}
